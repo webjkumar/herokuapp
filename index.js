@@ -2,7 +2,7 @@
 const express = require('express');
 //Creates our express server
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 //Serves static files (we need it to import a css file)
 app.use(express.static('public'))
 //Sets a basic route
