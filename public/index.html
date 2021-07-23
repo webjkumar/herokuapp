@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <body>
-        Chat App
-        <form id="message-form">
-            <input type="text" name="message" /> <input type="submit" value="Submit" />
-        </form>
-        <button id="increment">+1</button>
-        <script src="/socket.io/socket.io.js"></script>
-        <script src="/js/chat.js"></script>
-    </body>
+
+<head>
+</head>
+
+<body>
+    Chat App
+    <div id="messages">
+
+    </div>
+    <form id="message-form">
+        <input id="message-text" type="text" name="message" /> <input id="message-submit-button" type="submit"
+            value="Submit" />
+    </form>
+    <script id="message-template">
+        <div>
+            <p>
+                <span>{{message}}</span>
+            </p>
+        </div>
+    </script>
+    <script src="/js/mustache.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
 </html>
